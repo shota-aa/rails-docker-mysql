@@ -1,5 +1,6 @@
 ### run in local
-- docker compose run web bundle exec rails new . --force --api -d mysql --skip-test
+- rails new . --force --api -d mysql --skip-test
+- git switch master
 - edit ./config/database.yaml
 - password: password
 - host: rails-mysql
