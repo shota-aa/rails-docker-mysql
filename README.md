@@ -10,10 +10,11 @@
   - sudo apt install libmysqlclient-dev
   - bundle install
 - git switch master
-- edit ./config/database.yaml
+### edit
+- ./config/database.yaml
   - password: password
   - host: rails-mysql
-- edit docker-compose.yaml
+- docker-compose.yaml
   - MYSQL_DATABASE: {db name}
 - make up-b
 ### pay attention
