@@ -1,24 +1,14 @@
-# README
+### run in local
+- rails new . --force --api -d mysql --skip-test
+- If you can't install mysql2, run 
+  - sudo apt install libmysqlclient-dev
+  - bundle install
+- git switch master
+- edit ./config/database.yaml
+  - password: password
+  - host: rails-mysql
+- Make sure command rails locally to get permission if your OS is linux
+- To reflect db changes, retype make down and make up.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### initial
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

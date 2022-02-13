@@ -12,3 +12,4 @@ COPY Gemfile.lock /app
 WORKDIR /app
 
 RUN gem install bundler && bundle install
+# RUN bundle exec rails db:create

@@ -8,15 +8,17 @@ services:
       - db
     volumes:
       - .:/app
-    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    # -c付けると失敗しても続けるだっけ？
+    command: /bin/sh -c "rm -f tmp/pids/server.pid && bundle exec rails db:create && bundle exec rails db:migrate && bundle exec rails s -p 3000 -b '0.0.0.0'"
   db:
     image: mysql:8.0
     container_name: rails-mysql
-    volumes:
-      - mysql_data:/var/lib/mysql/
-      - ./mysql/init:/docker-entrypoint-initdb.d
+    # volumes:
+      # - mysql_data:/var/lib/mysql/
+      # - ./mysql/init:/docker-entrypoint-initdb.d
     environment:
       MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: rails_docker_mysql_development
     ports:
       - "3306:3306"
 volumes:
