@@ -15,6 +15,7 @@
   - host: rails-mysql
 - make up-b
 ### pay attention
-- Make sure command rails locally to get permission if your OS is linux
+- Make sure command rails locally to get permission if your OS is linux.
 - To reflect db changes, retype make down and make up.
+- Database name is based on root directory name.
 
