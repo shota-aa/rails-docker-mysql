@@ -1,4 +1,4 @@
-### copy followings
+### copy followings (dockerize don't work in M1)
 - Dockerfile
 - docker-compose.yaml
 - Makefile
